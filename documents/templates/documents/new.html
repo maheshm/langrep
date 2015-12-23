@@ -1,0 +1,45 @@
+{% extends "documents/base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1> Upload new document </h1>
+
+  <form method="post" action="/documents/create">
+    {% csrf_token %}
+
+    <div class="row row-centered ">
+      <div class="col-xs-9 col-centered singupbox">                                  
+        <div class="col-md-6 hrline" >
+          <div class="form-group">
+            Title:
+            <input type="text" id="title" name="title" class="form-control"/>
+          </div>
+          <div class="form-group">
+            Sub Title:
+            <input type="text" id="subtitle" name="subtitle" class="form-control" />
+          </div>
+          <div class="form-group">
+            Document:
+            <textarea id="content" name="content" class="form-control" rows="10"></textarea>
+          </div>
+          <div class="form-group">
+            Meta Image (not implemented):
+            <input type="file" id="image" name="image" class="form-control"/>
+          </div>
+          <div class="form-group">
+            Domain
+            <select id="domain" name="domain" class="form-control">
+                  <option name="internet" value="internet">Internet</option>
+                  <option name="finance" value="finance">Finance</option>
+                  <option name="business" value="business">Business</option>
+            </select>
+          </div>
+
+          <input type="submit" value="Upload" class="btn btn-prinmary"/>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+{%endblock content %}

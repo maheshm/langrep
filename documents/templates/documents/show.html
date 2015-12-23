@@ -1,0 +1,8 @@
+{% extends "documents/base.html" %}
+
+{% block content %}
+      <h2 class="text-center">{{ doc.title}}</h2>
+      <h2 class="text-center"><small>{{ doc.sub_title}}</small></h2>
+      <h3 class="text-center"><b>{{ doc.user}}</b></h3>
+      <p class="text-justify">{{ doc.text }} </p>
+{% endblock content %}

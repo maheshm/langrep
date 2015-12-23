@@ -1,0 +1,35 @@
+<html>
+<head>
+<title> Content Publishing </title>
+{% block css %}
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
+{% endblock css %}
+{% block js %}
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+{% endblock js %}
+</head>
+
+<body>
+{% block header %}
+  {% include 'documents/header.html' %}
+{% endblock header %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      {% block content %}
+      {% endblock content %}
+    </div>
+    <div class="col-md-2">
+      <div class="highlight">
+        <pre> Ads<br><br><br> </pre>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="section footer"> <p class="text-center"> 2015 </p></div>
+
+</body>
+</html>
