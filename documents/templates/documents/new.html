@@ -8,7 +8,7 @@
     {% csrf_token %}
 
     <div class="row row-centered ">
-      <div class="col-xs-9 col-centered singupbox">                                  
+      <div class="col-xs-9 col-centered singupbox">
         <div class="col-md-6 hrline" >
           <div class="form-group">
             Title:
@@ -27,12 +27,10 @@
             <input type="file" id="image" name="image" class="form-control"/>
           </div>
           <div class="form-group">
-            Domain
-            <select id="domain" name="domain" class="form-control">
-                  <option name="internet" value="internet">Internet</option>
-                  <option name="finance" value="finance">Finance</option>
-                  <option name="business" value="business">Business</option>
-            </select>
+            Tag
+            {% for tag in tags %}
+            <input type="radio" name="tag" value="{{tag.id}}">{{tag.name}}<br>
+            {% endfor %}
           </div>
 
           <input type="submit" value="Upload" class="btn btn-prinmary"/>

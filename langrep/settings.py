@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'langrep.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django_mongodb_engine', #'django.db.backends.postgresql_psycopg2', #'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', #'django.db.backends.sqlite3',
         'NAME': 'langrep',
-        #'USER': 'postgres',
-        #'PASSWORD': 'postgres',
-        #'HOST':'localhost'
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST':'localhost'
     }
 }
 

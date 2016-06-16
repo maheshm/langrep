@@ -5,7 +5,8 @@
   <p>No documents uploaded yet</p>
 {% endif %}
 
-{% for doc in docs %}
-  <a href="/documents/show/{{doc.id}}">{{doc.title}}</a> <i><small>uploaded by {{doc.user}}</small></i><br>
-{% endfor %} 
+  {% for doc in docs %}
+  {{doc}}
+  <a href="/documents/show/">{{doc.title}}</a> <i><small>uploaded by {{doc.user}}</small></i><br>
+{% endfor %}
 {% endblock content %}
